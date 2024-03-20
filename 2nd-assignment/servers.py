@@ -68,7 +68,7 @@ def submit():
         conn.commit()
         message = "Data saved successfully!"
     else:
-        message = "Please fill in all fields and ensure phone number is 08 digits numeric!"
+        message = "Please fill in all fields and ensure phone number is 08 digits (numeric)!"
 
     cursor.execute('SELECT * FROM usertables')
     data = cursor.fetchall()
