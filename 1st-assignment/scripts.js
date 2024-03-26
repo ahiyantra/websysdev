@@ -27,6 +27,11 @@ function validateForm() {
         return false;
     }
 
+    if (age <= 0) {
+        alert('Age must be greater than zero.');
+        return false;
+    }
+
     // Return true if validation passes, false otherwise
     return true; 
 }
@@ -34,16 +39,6 @@ function validateForm() {
 function sendDataToServer() {
     console.log('sending AJAX request ...');
     
-    // Implement AJAX request to send form data to server
-    var formData = new FormData(document.getElementById('dataForm'));
-    console.log("form data : ",formData)
-
-    var plainData = {};
-    for (var [key, value] of formData.entries()) {
-        plainData[key] = value;
-    }
-    console.log("plain form data : ",plainData);
-
     // Construct a JSON object containing input values
     var jsonData = {
         name: document.getElementById('name').value,
@@ -52,7 +47,7 @@ function sendDataToServer() {
         address: document.getElementById('address').value,
         age: document.getElementById('age').value
     };
-    console.log("json form data : ",jsonData);
+    console.log("json form data : ", jsonData);
 
     // Send the JSON object to the server using AJAX
     var xhr = new XMLHttpRequest();
@@ -69,7 +64,6 @@ function sendDataToServer() {
         }
     };
     xhr.send(JSON.stringify(jsonData));
-
 }
 
 // Function to update table with entered data
@@ -89,11 +83,28 @@ function updateTable(response_data) {
             newRow += '</tr>';
             tableBody.innerHTML += newRow;
         });
-        console.log("response data : ",response_data);
+        console.log("response data : ", response_data);
     } else {
         console.error('invalid response data received : ', response_data);
     }
 }
 
+// Fetch initial data from the server
+window.addEventListener('DOMContentLoaded', function() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://localhost:8000/api', true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                updateTable(response.data);
+            } else {
+                console.error('Error:', xhr.statusText);
+            }
+        }
+    };
+    xhr.send();
+});
+
 // adding example
-updateTable([{name:"Nicholas", surname:"Szabó", telephone:"0123456789", address:"Washington DC, The USA.", age:"60"}]) 
+updateTable([{name:"Nicholas", surname:"Szabó", telephone:"0123456789", address:"Washington DC, The USA.", age:"60"}])
