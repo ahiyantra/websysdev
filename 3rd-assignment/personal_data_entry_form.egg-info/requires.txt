@@ -1,0 +1,5 @@
+Flask
+flask-sqlalchemy
+marshmallow
+mysql-connector-python
+flask-cors

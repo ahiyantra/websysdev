@@ -1,0 +1,7 @@
+distribution.py
+personal_data_entry_form.egg-info/PKG-INFO
+personal_data_entry_form.egg-info/SOURCES.txt
+personal_data_entry_form.egg-info/dependency_links.txt
+personal_data_entry_form.egg-info/requires.txt
+personal_data_entry_form.egg-info/top_level.txt
+server/__init__.py
