@@ -87,5 +87,5 @@ if __name__ == '__main__':
     print("**Server is running!**")
     print("Access the application at - http://127.0.0.1:5000/")
     webbrowser.open('http://127.0.0.1:5000/')
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=False)
     
