@@ -1,3 +1,4 @@
+
 import mysql.connector
 from server import create_app
 from server.databases.util_db import db_util
