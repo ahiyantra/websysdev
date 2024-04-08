@@ -1,5 +1,5 @@
 
-from server import create_app
+from flask_server import create_app
 from flask import send_from_directory
 from flask_cors import CORS
 import os

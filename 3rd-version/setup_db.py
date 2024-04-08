@@ -1,8 +1,8 @@
 
 import mysql.connector
-from server import create_app
-from server.databases.util_db import db_util
-from server.models.person_models import Person
+from flask_server import create_app
+from flask_server.databases.util_db import db_util
+from flask_server.models.person_models import Person
 from config import config
 
 # Database configuration

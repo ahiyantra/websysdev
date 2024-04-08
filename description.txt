@@ -1,0 +1,13 @@
+Project Aim:
+
+  Create a simple web application that uses the capabilities of the selected programming language, with any client-side & server-side frameworks.
+
+Web Page Requirements:
+
+  It's necessary to create a personal data entry form that allows a user to specify their Name, Surname, Telephone, Address & Age.
+  It's necessary to implement the validation of the entered data. 
+  Check that all fields are filled in, the telephone number contains only numbers & all 08 digits of the telephone number have been entered. 
+  All data validation should be done on the server side.
+  After validating the entered data, it's necessary to save the data in a database (DBMS optional). 
+  After validating the entered data, it's necessary to display a table showing the data of all entered persons.
+  Use stylesheets to design the input form and the result table.
