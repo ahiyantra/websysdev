@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
-import './components/person_form.css';
+import './components/person-form.css';
 
 const rootElement = document.getElementById('root');
 

@@ -18,7 +18,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from app_name.views import PersonViewSet
+from django_app.views import PersonViewSet
 
 router = routers.DefaultRouter()
 router.register(r'api/people', PersonViewSet)

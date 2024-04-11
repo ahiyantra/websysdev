@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import PersonForm from './components/person_form';
+import PersonForm from './components/person-form';
 
 function App() {
   useEffect(() => {
