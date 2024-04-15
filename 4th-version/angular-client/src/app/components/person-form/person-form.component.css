@@ -1,1 +1,22 @@
 /* Add your desired styles here */
+
+.person-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+table {
+    width: 90%;
+}
+
+.mat-table {
+    width: 90%;
+    margin-top: 24px;
+}
+
+h2 {
+  text-align: center;
+}

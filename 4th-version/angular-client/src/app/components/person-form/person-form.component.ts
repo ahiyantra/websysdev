@@ -3,7 +3,10 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Person } from '../../models/person.model';
 import { PersonService } from '../../services/person.service';
-import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
+import { HttpClientModule } from '@angular/common/http';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
 
 @Component({
   selector: 'app-person-form',
@@ -12,7 +15,10 @@ import { HttpClientModule } from '@angular/common/http'; // Import HttpClientMod
   imports: [
     FormsModule,
     CommonModule,
-    HttpClientModule // Add HttpClientModule to imports
+    HttpClientModule,
+    MatInputModule,
+    MatButtonModule,
+    MatTableModule
   ],
   standalone: true
 })
@@ -36,6 +42,7 @@ export class PersonFormComponent {
   private fetchPersons() {
     this.personService.getPeople().subscribe((persons) => {
       this.persons = persons;
-    });
+    }
+  );
   }
 }

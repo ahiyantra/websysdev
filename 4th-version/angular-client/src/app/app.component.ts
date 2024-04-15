@@ -1,8 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { PersonFormComponent } from './components/person-form/person-form.component';
-import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
+import { HttpClientModule } from '@angular/common/http'; 
 import { RouterModule } from '@angular/router';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +15,13 @@ import { RouterModule } from '@angular/router';
   imports: [
     RouterOutlet,
     PersonFormComponent,
-    HttpClientModule, // Add HttpClientModule to imports
-    RouterModule
+    HttpClientModule, 
+    RouterModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatListModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
