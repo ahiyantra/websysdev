@@ -7,8 +7,3 @@
 | Project Stage 2 : first back-end framework with second database (2nd) |
 | Project Stage 3 : first front-end framework & first back-end framework with second database (3rd) |
 | Project Stage 4 : second front-end framework & second back-end framework with third database (4th) |
-| Course Title : Web Systems Development |
-| Course Code : InfT6021 |
-| Program : Master of Engineering for Information Technologies (M.Eng.-I.T.) |
-| Department : Faculty of Engineering and Information Technologies (IITF) |
-| Institution : Latvian University of Life Sciences and Technologies (LBTU) |
